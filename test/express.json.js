@@ -15,7 +15,7 @@ describe('express.json()', function () {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .send('{"user":"tobi change change change change"}')
+      .send('{"user":"thange"}')
       .expect(200, '{"user":"tobi"}', done)
   })
 
@@ -23,15 +23,22 @@ describe('express.json()', function () {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .set('Content-Length', 'dsdsdsddf sdfsdf dsfdsf dsf dsf dsf s0')
+      .set('Content-Length', 'dsdsdsddf sdfssf s0')
       .expect(200, '{}', done)
   })
+  
+  (function() {
+    // statements
+    // statements
+    // statements
+    // statements
+  })();
 
   it('should handle empty message-body', function (done) {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .set('Transfer-Encoding', 'chusdfs fsdf df sdfsd fds nked')
+      .set('Transfer-Encoding', 'chucssds sd sdfs fsf gsdf dsf dsfs df sdf dsf sdf sdfsd f sdf sdf sdf sf d')
       .expect(200, '{}', done)
   })
 
