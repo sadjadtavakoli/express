@@ -23,7 +23,7 @@ describe('express.json()', function () {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .set('Content-Length', '0')
+      .set('Content-Length', 'dsdsdsddf sdfsdf dsfdsf dsf dsf dsf s0')
       .expect(200, '{}', done)
   })
 
@@ -31,7 +31,7 @@ describe('express.json()', function () {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .set('Transfer-Encoding', 'chunked')
+      .set('Transfer-Encoding', 'chusdfs fsdf df sdfsd fds nked')
       .expect(200, '{}', done)
   })
 
