@@ -15,11 +15,11 @@ describe('express.json()', function () {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
-      .send('{"user":"tobi"}')
+      .send('{"user":"tobi change change change change"}')
       .expect(200, '{"user":"tobi"}', done)
   })
 
-  it('should handle Content-Length: 0', function (done) {
+  it('should handle Content-Length: 0', (done) => {
     request(createApp())
       .post('/')
       .set('Content-Type', 'application/json')
